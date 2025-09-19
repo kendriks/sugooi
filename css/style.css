@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color: #F7F1E3;
+}
+
+
+/* estiliza header */
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #272726 !important;
+
+}
+
+body {
+    background-color: #1A1A1D;
+}
+
+header h1 {
+    color: #FF6B00;
+}
+
+nav {
+    margin: auto;
+}
+
+.nav-lista{
+    display:flex;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin: 0 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFD60A;
+    font-size:x-large;
+}
+
+.buscar-animes {
+    margin-left: auto;
+    margin-right: 2em;
+}
+
+.buscar-animes input {
+    border-radius: 1em;
+    border: none;
+    height: 2em;
+    padding-left: 1em;
+}
+
+.buscar-animes button {
+    border-radius: 1em;
+    border: none;
+    height: 2em;
+    width: 4.5em;
+    background-color: #FF6B00;
+    color: #1A1A1D;
+}
+
+/* estiliza main */
+.main-container {
+    display: flex;
+    /* gap: 2em; */
+}
+
+section {
+    width: 100%;
+    padding-top: 2em;
+    overflow: auto;
+}
+
+.card {
+    margin: auto;
+    height: 16em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.2em;
+}
+
+/* estiliza container */
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+/* estiliza container card */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-bottom: solid 2px #444141;
+    padding-bottom: 2em;
+    gap: 2em;
+}
+
+/* estiliza título da sessão */
+.titulo-sessao {
+    border-left: solid #FF6B00;
+    padding-left: 0.6em;
+    margin-bottom: 1em;
+    font-size: 2vw;
+}
+
+/* estiliza sinopse */
+.sinopse {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: 0.3s ease;
+    
+}
+
+.card:hover .sinopse {
+    opacity: 1;
+}
+
+/* estiliza barra lateral */
+.barra-lateral {
+    display: flex;
+    flex-direction: column;
+    width: 28em;
+    margin-top: 2em;
+    margin-left: 2em;
+    border-left: solid 2px #444141;
+}
+
+.barra-lateral h2 {
+    margin-left: 0.5em;
+}
+
+.card-lateral {
+    height: 8em;
+    margin-left: 1em;
+    background-color: #262626;
+    display: flex;
+    margin-top: 1em;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-lateral img {
+    width: 8em;
+    margin-right: 0.5em;
+    object-fit: cover;
+}
+
+.text-card-lateral {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-lateral p:first-of-type {
+    padding-top: 0.5em;
+    font-size: large;
+}
+
+.card-lateral p:nth-of-type(2) {
+    color: #7a7373;
+}
+
+/* estiliza menu mobile */
+.menu-mobile {
+    cursor: pointer;
+    display: none;
+}
+
+.menu-mobile div {
+    width: 3vw;
+    height: 0.3vw;
+    margin: 0.5vw;
+    background-color: #fff;
+}
+
+/* estiliza footer */
+footer {
+    display: flex;
+    height: 4em;
+    background-color: #262626;
+    margin-top: 2.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+/* responsividade */
+@media screen and (max-width: 1280px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+    }
+
+    .barra-lateral {
+        width: 60%;
+    }
+
+    .titulo-sessao {
+        font-size: 2vh;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+
+    .barra-lateral {
+        width: 50%;
+    }
+
+    .titulo-sessao {
+        font-size: 2vh;
+    }
+
+    .nav-lista {
+        display: none;
+    }
+
+    .buscar-animes {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        order: 1;
+        width: 100%;
+    }
+
+    .barra-lateral {
+        order: 2;
+        width: 100%;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titulo-sessao {
+        font-size: 2vh;
+    }
+
+    .nav-lista {
+        display: none;
+    }
+
+    .buscar-animes {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        order: 1;
+        width: 100%;
+    }
+
+    .barra-lateral {
+        order: 2;
+        width: 100%;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titulo-sessao {
+        font-size: 2vh;
+    }
+
+    .nav-lista {
+        display: none;
+    }
+
+    .buscar-animes {
+        display: none;
+    }
+}
