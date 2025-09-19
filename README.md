@@ -12,7 +12,7 @@ O objetivo do projeto é exibir a sinopse de anime, além de uma lista com os an
 - 🎨 **Design Semântico** utilizando elementos modernos do HTML5.  
 - 🔗 **Navegação entre páginas** com links internos e externos.  
 - 💾 **Uso de mídias** (imagens).   
-- 🌍 **Acessibilidade** com uso de `alt`, `aria-label` e boas práticas.  
+- 🌍 **Acessibilidade** com uso de `alt`, e boas práticas.  
 
 ---
 
